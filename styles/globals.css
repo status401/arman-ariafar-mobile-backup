@@ -1,16 +1,53 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.instagramShadow {
+    box-shadow: 0 20px 15px rgba(223, 49, 116, 0.2);
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.boxShadowHeader {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
-* {
-  box-sizing: border-box;
+.boxShadowHeaderBtn {
+    box-shadow: 0px 15px 30px rgba(245, 85, 85, 0.5);
+    background-image: linear-gradient(135deg, #ff870f 10%, #f55555 100%);
+}
+
+@media (max-height: 785px) {
+    .hiddenIt {
+        display: none;
+    }
+}
+
+@media (orientation: landscape) {
+    .landScapeView {
+        display: block;
+    }
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    font-size: 18px;
+    color: #fff;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 40px 40px;
+    direction: ltr;
+}
+
+.parallax-bg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 200%;
+    height: 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
 }

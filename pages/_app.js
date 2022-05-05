@@ -1,7 +1,16 @@
-import '../styles/globals.css'
+import "../styles/globals.css";
+import "../styles/font.css";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+//? layout
+import Layout from "../components/Layout";
+
+//? swiper
+import "swiper/css/bundle";
+
+export default function MyApp({ Component, pageProps }) {
+    return (
+        <Layout>
+            <Component {...pageProps} />
+        </Layout>
+    );
 }
-
-export default MyApp
