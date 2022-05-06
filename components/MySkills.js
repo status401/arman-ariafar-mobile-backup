@@ -3,13 +3,15 @@ import { useState } from "react";
 
 //? components
 import SliderCoding from "./ui/SliderCoding";
+import SliderDesigning from "./ui/SliderDesign";
+import SliderSoft from "./ui/SliderSoft";
 
 //? component
 export default function MySkills() {
     const [active, setActive] = useState(2);
     return (
         <>
-            <section className="m-auto flex w-full flex-col border-b-4 border-orange-500 border-opacity-50 max-w-sm">
+            <section id="skills" className="m-auto flex w-full flex-col border-b-4 border-orange-500 border-opacity-50">
                 <div className="h-24 w-full border-b-[3px] border-orange-500 border-opacity-50">
                     <div className="relative m-auto h-full w-full max-w-sm py-4">
                         <h1 className="absolute right-1/2 translate-x-1/2 text-6xl font-thin text-orange-500 text-opacity-10">
@@ -41,7 +43,9 @@ export default function MySkills() {
                         </div>
                     </div>
                 </div>
+                {active === 1 && <SliderDesigning />}
                 {active === 2 && <SliderCoding />}
+                {active === 3 && <SliderSoft />}
             </section>
         </>
     );

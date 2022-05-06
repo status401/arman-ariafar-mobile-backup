@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
+}
+
 .instagramShadow {
     box-shadow: 0 20px 15px rgba(223, 49, 116, 0.2);
 }
@@ -15,7 +20,7 @@
     background-image: linear-gradient(135deg, #ff870f 10%, #f55555 100%);
 }
 
-@media (max-height: 785px) {
+@media (max-height: 760px) {
     .hiddenIt {
         display: none;
     }
@@ -50,4 +55,39 @@
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center;
+}
+
+.swiper-wrapper {
+    align-items: center;
+}
+
+div.portfolioSlider .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    direction: rtl;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    padding: 0 15px 50px;
+}
+
+div.portfolioSlider .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+div.portfolioSlider .swiper-pagination {
+    bottom: 0;
 }

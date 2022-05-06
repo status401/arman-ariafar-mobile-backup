@@ -9,7 +9,7 @@ import { BsArrowDown } from "react-icons/bs";
 //? component
 export default function Header() {
     return (
-        <header className="h-fit min-h-screen w-full border-b-4 border-orange-500 border-opacity-50 px-4 pt-20">
+        <header className="h-fit min-h-screen w-full border-b-4 border-orange-500 border-opacity-50 px-4 pt-20" id="homeSection">
             <div className="relative m-auto flex h-full w-full max-w-sm flex-col items-center">
                 <div className="relative aspect-square w-full">
                     <Binary />
@@ -24,7 +24,7 @@ export default function Header() {
                         </a>
                     </div>
                 </div>
-                <div className="mt-8 grid grid-rows-2 items-center justify-items-center">
+                <div className="mt-2 grid grid-rows-2 items-center justify-items-center">
                     <h1 className="text-4xl font-thin text-orange-500">
                         <span className="text-zinc-500">من</span> آرمان آریافرم
                     </h1>
@@ -33,20 +33,26 @@ export default function Header() {
                     </p>
                     <div className="mt-4 w-2/3 justify-self-start border-b-[1.5px] border-dashed border-zinc-300" />
                 </div>
-                <button className="mt-4 flex w-2/3 items-center justify-center gap-x-1 py-3 text-sm font-black text-orange-500">
+                <a
+                    href="#portfolioSection"
+                    className="mt-4 flex w-2/3 items-center justify-center gap-x-1 py-3 text-sm font-black text-orange-500"
+                >
                     مشاهده نمونه کارها
-                </button>
-                <button
+                </a>
+                <a
+                    href="#skills"
                     className="
                     boxShadowHeaderBtn mt-3 mb-4 flex w-2/3 items-center 
                     justify-center gap-x-1 rounded-lg py-3 text-sm font-black text-white"
                 >
                     <HiOutlineTerminal className="text-2xl" />
                     مشاهده مهارت‌ها
-                </button>
+                </a>
             </div>
-            <p className="hiddenIt absolute bottom-10 right-1/2 translate-x-1/2 text-zinc-400">شناخت بهتر</p>
-            <BsArrowDown className="hiddenIt absolute bottom-5 right-1/2 mt-2 translate-x-1/2 text-xl text-zinc-400" />
+            <a href="#skills">
+                <p className="hiddenIt absolute bottom-10 right-1/2 translate-x-1/2 text-zinc-400">شناخت بهتر</p>
+                <BsArrowDown className="hiddenIt absolute bottom-5 right-1/2 mt-2 translate-x-1/2 text-xl text-zinc-400" />
+            </a>
         </header>
     );
 }

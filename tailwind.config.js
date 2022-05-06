@@ -12,6 +12,8 @@ module.exports = {
             },
             backgroundImage: {
                 coding: "url('/images/Coding.jpg')",
+                design: "url('/images/Design.jpg')",
+                soft: "url('/images/SoftSkills.jpg') ",
             },
         },
     },

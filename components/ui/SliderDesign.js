@@ -9,13 +9,12 @@ import "swiper/css/navigation";
 // import required modules
 import { Parallax, Pagination, Navigation, Autoplay } from "swiper";
 
-export default function SliderCoding() {
+export default function SliderDesign() {
     return (
         <>
             <Swiper
                 style={{
                     "--swiper-theme-color": "#FF870F",
-                    "--swiper-navigation-color": "#fff",
                     "--swiper-navigation-size": "30px",
                 }}
                 autoplay={{
@@ -31,7 +30,7 @@ export default function SliderCoding() {
                 modules={[Parallax, Pagination, Navigation, Autoplay]}
                 className="mySwiper"
             >
-                <div slot="container-start" className="parallax-bg bg-coding opacity-50" data-swiper-parallax="-20%" />
+                <div slot="container-start" className="parallax-bg bg-design opacity-50" data-swiper-parallax="-20%" />
                 <SwiperSlide>
                     <div className="animate-[blurAnimate_1s_ease-in-out_infinite] overflow-hidden rounded-lg bg-white bg-opacity-80 py-2 pl-4">
                         <div className="text-2xl font-thin text-orange-500" data-swiper-parallax="-100">

@@ -11,7 +11,7 @@ export default function Layout({ children }) {
                         <NavIcon />
                     </button>
                     <h6 dir="ltr" className="translate-y-[2px] text-2xl font-thin text-orange-500">
-                        A<span className="text-xl">A</span>.
+                        <a href="#homeSection">A<span className="text-xl">A</span>.</a>
                     </h6>
                 </div>
             </nav>
