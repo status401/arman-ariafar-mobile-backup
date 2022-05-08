@@ -24,7 +24,7 @@ export default function SliderPortfolio() {
                 clickable: true,
             }}
             autoplay={{
-                delay: 2000,
+                delay: 3000,
                 disableOnInteraction: false,
             }}
             modules={[Pagination, Autoplay]}

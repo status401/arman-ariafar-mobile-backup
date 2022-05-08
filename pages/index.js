@@ -6,6 +6,7 @@ import Header from "../components/Header";
 import MySkills from "../components/MySkills";
 import ForFun from "../components/ForFun";
 import MyPortfolio from "../components/Portfolio";
+import ContactMe from "../components/ContactMe";
 
 //? component
 export default function HomePage() {
@@ -20,8 +21,8 @@ export default function HomePage() {
                 <MySkills />
                 <ForFun />
                 <MyPortfolio />
+                <ContactMe />
             </main>
-            <div className="pt-96"></div>
         </>
     );
 }

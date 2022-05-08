@@ -1,3 +1,6 @@
+//? required
+import { motion } from "framer-motion";
+
 //? ui
 import Binary from "../components/ui/Binary";
 import Instagram from "../components/ui/Instagram";
@@ -6,10 +9,30 @@ import Instagram from "../components/ui/Instagram";
 import { HiOutlineTerminal } from "react-icons/hi";
 import { BsArrowDown } from "react-icons/bs";
 
+//? framer
+const variants = {
+    hidden: {
+        opacity: 0,
+    },
+    onScreen: {
+        opacity: 1,
+        transition: {
+            duration: 1,
+        },
+    },
+};
+
 //? component
 export default function Header() {
     return (
-        <header className="h-fit min-h-screen w-full border-b-4 border-orange-500 border-opacity-50 px-4 pt-20" id="homeSection">
+        <motion.header
+            variants={variants}
+            initial="hidden"
+            whileInView="onScreen"
+            viewport={{ once: true, amount: 0.8 }}
+            className="h-fit min-h-screen w-full border-b-4 border-orange-500 border-opacity-50 px-4 pt-20"
+            id="homeSection"
+        >
             <div className="relative m-auto flex h-full w-full max-w-sm flex-col items-center">
                 <div className="relative aspect-square w-full">
                     <Binary />
@@ -49,10 +72,10 @@ export default function Header() {
                     مشاهده مهارت‌ها
                 </a>
             </div>
-            <a href="#skills">
-                <p className="hiddenIt absolute bottom-10 right-1/2 translate-x-1/2 text-zinc-400">شناخت بهتر</p>
-                <BsArrowDown className="hiddenIt absolute bottom-5 right-1/2 mt-2 translate-x-1/2 text-xl text-zinc-400" />
+            <a href="#skills" className="opacity-50">
+                <p className="hiddenIt absolute bottom-10 right-1/2 translate-x-1/2 text-zinc-500">شناخت بهتر</p>
+                <BsArrowDown className="hiddenIt absolute bottom-5 right-1/2 mt-2 translate-x-1/2 text-xl text-zinc-500" />
             </a>
-        </header>
+        </motion.header>
     );
 }
