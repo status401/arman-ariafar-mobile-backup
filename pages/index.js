@@ -1,12 +1,16 @@
 //? required
 import Head from "next/head";
+import { useEffect, useState } from "react";
 
-//? components
+//? components mobile
 import Header from "../components/Header";
 import MySkills from "../components/MySkills";
 import ForFun from "../components/ForFun";
 import MyPortfolio from "../components/Portfolio";
 import ContactMe from "../components/ContactMe";
+
+//? components desktop
+import PortfolioDesktop from "../components/PortfolioDesktop";
 
 //? component
 export default function HomePage() {

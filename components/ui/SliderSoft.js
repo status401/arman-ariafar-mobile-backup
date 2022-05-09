@@ -1,5 +1,19 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import { motion } from "framer-motion";
+
+//? framer
+const variants = {
+    hidden: {
+        opacity: 0,
+    },
+    animate: {
+        opacity: 1,
+        transition: {
+            duration: 1,
+        },
+    },
+};
 
 // Import Swiper styles
 import "swiper/css";
@@ -11,7 +25,7 @@ import { Parallax, Pagination, Navigation, Autoplay } from "swiper";
 
 export default function SliderSoft() {
     return (
-        <>
+        <motion.div key="soft" variants={variants} initial="hidden" animate="animate" className="h-full w-full">
             <Swiper
                 style={{
                     "--swiper-theme-color": "#FF870F",
@@ -67,6 +81,6 @@ export default function SliderSoft() {
                     </div>
                 </SwiperSlide>
             </Swiper>
-        </>
+        </motion.div>
     );
 }

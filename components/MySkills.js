@@ -23,6 +23,9 @@ const variants = {
 //? component
 export default function MySkills() {
     const [active, setActive] = useState(2);
+    const activeHandler = (id) => {
+        setActive(id);
+    };
     return (
         <motion.section
             variants={variants}
@@ -43,19 +46,19 @@ export default function MySkills() {
                             items-center justify-items-center  text-zinc-400"
                     >
                         <button
-                            onClick={() => setActive(1)}
+                            onClick={() => activeHandler(1)}
                             className={active === 1 ? "font-thin text-orange-500" : "font-bold "}
                         >
                             طراحی
                         </button>
                         <button
-                            onClick={() => setActive(2)}
+                            onClick={() => activeHandler(2)}
                             className={active === 2 ? "font-thin text-orange-500" : "font-bold "}
                         >
                             برنامه‌نویسی
                         </button>
                         <button
-                            onClick={() => setActive(3)}
+                            onClick={() => activeHandler(3)}
                             className={active === 3 ? "font-thin text-orange-500" : "font-bold "}
                         >
                             محیط کاری

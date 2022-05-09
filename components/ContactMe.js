@@ -28,7 +28,7 @@ export default function ContactMe() {
             initial="hidden"
             whileInView="onScreen"
             viewport={{ once: true, amount: 0.5 }}
-            className="flex w-full max-w-sm flex-col items-center justify-center px-4 pt-4"
+            className="flex w-full max-w-sm flex-col items-center justify-center px-4 pt-4 "
             id="contactMeSection"
         >
             <h1 className="text-6xl font-thin text-orange-500 opacity-10">تماس با من</h1>

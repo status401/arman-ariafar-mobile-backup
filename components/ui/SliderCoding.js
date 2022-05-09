@@ -1,17 +1,31 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import { motion } from "framer-motion";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
+//? framer
+const variants = {
+    hidden: {
+        opacity: 0,
+    },
+    animate: {
+        opacity: 1,
+        transition: {
+            duration: 1,
+        },
+    },
+};
+
 // import required modules
 import { Parallax, Pagination, Navigation, Autoplay } from "swiper";
 
 export default function SliderCoding() {
     return (
-        <>
+        <motion.div key="coding" variants={variants} initial="hidden" animate="animate" className="h-full w-full">
             <Swiper
                 style={{
                     "--swiper-theme-color": "#FF870F",
@@ -85,6 +99,6 @@ export default function SliderCoding() {
                     </div>
                 </SwiperSlide>
             </Swiper>
-        </>
+        </motion.div>
     );
 }
